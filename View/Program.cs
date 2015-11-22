@@ -28,15 +28,13 @@ namespace View
                     Console.WriteLine("Видимо, вы ввели не целое число. Сообщение: "+e.Message);
                 }
                 
-                if (amount <= 0)
+                while (amount <= 0)
                 {
-                    while (amount <= 0)
-                    {
-                        Console.WriteLine("Попробуйте еще раз:");
-                        str = Console.ReadLine();
-                        amount = Convert.ToInt32(str);
-                    }
+                    Console.WriteLine("Вы ввели не положительное число. Попробуйте еще раз:");
+                    str = Console.ReadLine();
+                    amount = Convert.ToInt32(str);
                 }
+
                 var count = 0;
                 var numbertron = new Numbertron();
                 var silentBob = new SilentBob();
