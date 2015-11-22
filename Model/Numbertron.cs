@@ -10,9 +10,10 @@ namespace Model
     {
         public event NewNumberEventHandler NewNumber;
 
+        Random rand = new Random();
+
         public void Generate()
         {
-            var rand = new Random();
             NewNumber?.Invoke(this, new NewNumberEventArgs(rand.Next()));
         }
     }
