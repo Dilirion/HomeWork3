@@ -25,7 +25,7 @@ namespace View
                 }
                 catch (FormatException e)
                 {
-                    Console.WriteLine("Видимо, вы ввели не целое число. Сообщение: "+e.Message);
+                    Console.WriteLine("Видимо, вы ввели не целое число. Сообщение: " + e.Message);
                 }
                 
                 while (amount <= 0)
@@ -39,6 +39,7 @@ namespace View
                 var numbertron = new Numbertron();
                 var silentBob = new SilentBob();
                 var jay = new Jay();
+                //Подписка на событие
                 numbertron.NewNumber += jay.FetchNewNumber;
                 numbertron.NewNumber += silentBob.FetchNewNumber;
                 while (count < amount)
